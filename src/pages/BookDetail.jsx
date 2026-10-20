@@ -9,11 +9,14 @@ import siteConfig from '../data/siteConfig';
 import BookCover from '../components/books/BookCover';
 import BookCard from '../components/books/BookCard';
 import NewsletterBanner from '../components/books/NewsletterBanner';
+import ChapterShop from '../components/books/ChapterShop';
+import { getChapterSales } from '../data/chapterSales';
 import {
     formatPrice,
     formatReleaseDate,
     getBuyLinks,
     getShortDescription,
+    getStartingPrice,
 } from '../components/books/bookUtils';
 
 function Stars({ rating }) {
@@ -98,6 +101,8 @@ export default function BookDetail() {
     }
 
     const buyLinks = getBuyLinks(book);
+    // Books that sell by chapter show the chapter shop instead of the plain contents list
+    const hasChapterShop = Boolean(getChapterSales(book.slug) && getStartingPrice(book));
     const related = (book.relatedBooks || [])
         .map((id) => books.find((b) => b.id === id))
         .filter(Boolean);
@@ -209,7 +214,7 @@ export default function BookDetail() {
 
             {/* About the book + contents */}
             <section className="section-alt">
-                <div className="container-custom grid gap-12 lg:grid-cols-[1.4fr_1fr]">
+                <div className={`container-custom grid gap-12 ${hasChapterShop ? '' : 'lg:grid-cols-[1.4fr_1fr]'}`}>
                     <div>
                         <h2>About this book</h2>
                         <div className="section-divider mx-0 mt-4" />
@@ -218,17 +223,19 @@ export default function BookDetail() {
                         </p>
                     </div>
 
-                    <div>
-                        <h2>Inside the book</h2>
-                        <div className="section-divider mx-0 mt-4" />
-                        <ol className="space-y-2 text-charcoal-light">
-                            {book.tableOfContents.map((item) => (
-                                <li key={item} className="rounded-lg bg-white px-4 py-2.5 text-sm shadow-warm">
-                                    {item}
-                                </li>
-                            ))}
-                        </ol>
-                    </div>
+                    {!hasChapterShop && (
+                        <div>
+                            <h2>Inside the book</h2>
+                            <div className="section-divider mx-0 mt-4" />
+                            <ol className="space-y-2 text-charcoal-light">
+                                {book.tableOfContents.map((item) => (
+                                    <li key={item} className="rounded-lg bg-white px-4 py-2.5 text-sm shadow-warm">
+                                        {item}
+                                    </li>
+                                ))}
+                            </ol>
+                        </div>
+                    )}
                 </div>
             </section>
 
@@ -270,6 +277,9 @@ export default function BookDetail() {
                     </div>
                 </div>
             </section>
+
+            {/* Chapters (only for books listed in data/chapterSales.js) */}
+            <ChapterShop key={book.id} book={book} />
 
             {/* Testimonials */}
             {reviews.length > 0 && (
