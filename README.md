@@ -42,7 +42,7 @@ Open the address shown in the terminal, usually `http://localhost:5173`. The pag
 | Books and book details                | Built             |
 | Navbar, footer and layout             | Built             |
 | About (values, vision, mission)       | Coming soon       |
-| Service times and Plan Your Visit     | Coming soon       |
+| Service times and Plan Your Visit     | Built             |
 | Sermons                               | Coming soon       |
 | Podcast                               | Coming soon       |
 | Events                                | Coming soon       |
