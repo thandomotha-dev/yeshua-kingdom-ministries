@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import ComingSoon from './pages/ComingSoon';
 import Home from './pages/Home';
+import ServiceTimes from './pages/ServiceTimes';
 import Books from './pages/Books';
 import BookDetail from './pages/BookDetail';
 
@@ -25,7 +26,7 @@ export default function App() {
                 <Route path="bible" element={<ComingSoon title="Bible" />} />
                 <Route path="events" element={<ComingSoon title="Events" />} />
                 <Route path="marriage-training" element={<ComingSoon title="Marriage Training" />} />
-                <Route path="service-times" element={<ComingSoon title="Service Times" />} />
+                <Route path="service-times" element={<ServiceTimes />} />
                 <Route path="give" element={<ComingSoon title="Offerings & Partnerships" />} />
                 <Route path="prayer-request" element={<ComingSoon title="Prayer Request" />} />
                 <Route path="contact" element={<ComingSoon title="Contact Us" />} />
