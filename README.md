@@ -85,6 +85,7 @@ You do not need to touch the page code to update the site. Edit these files in `
 | `navigation.js`       | The menu links                                              |
 | `serviceTimes.js`     | Service times and the Plan Your Visit questions             |
 | `books.js`            | All books, prices, buy links, excerpts, testimonials        |
+| `chapterSales.js`     | Per-chapter prices and which chapters are free              |
 | `sermons.js`          | Sermon videos (needs a YouTube video ID for each)           |
 | `events.js`           | Upcoming events (past events are hidden automatically)      |
 | `podcasts.js`         | Podcast episodes                                            |
