@@ -43,9 +43,9 @@ Open the address shown in the terminal, usually `http://localhost:5173`. The pag
 | Navbar, footer and layout             | Built             |
 | About (values, vision, mission)       | Coming soon       |
 | Service times and Plan Your Visit     | Built             |
-| Sermons                               | Coming soon       |
+| Sermons                               | Built             |
 | Podcast                               | Coming soon       |
-| Events                                | Coming soon       |
+| Events                                | Built             |
 | Marriage training                     | Coming soon       |
 | Offerings and partnerships (Give)     | Coming soon       |
 | Bible                                 | Coming soon       |
