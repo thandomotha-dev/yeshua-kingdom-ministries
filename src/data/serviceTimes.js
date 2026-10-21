@@ -8,7 +8,6 @@
  * - time: start time
  * - description: a short note about the service
  * - venue: where it takes place (leave blank if same as main church)
- * - icon: an emoji or icon name (used for display)
  * - ageGroup: only for children/youth services
  * - safetyInfo: only for children's services
  *
@@ -26,7 +25,6 @@ const serviceTimes = [
     description:
       'Our main weekly gathering for worship, the Word, and fellowship. Everyone is welcome!',
     venue: '', // Leave blank = main church location
-    icon: '⛪',
   },
   {
     id: 'midweek-service',
@@ -37,7 +35,6 @@ const serviceTimes = [
     description:
       'An interactive study through the Scriptures. Bring your Bible and your questions!',
     venue: '',
-    icon: '📖',
   },
   {
     id: 'youth-service',
@@ -48,7 +45,6 @@ const serviceTimes = [
     description:
       'A vibrant, Spirit-filled gathering for teens and young adults (ages 13–25).',
     venue: 'Youth Hall',
-    icon: '🔥',
     ageGroup: '13–25 years',
   },
   {
@@ -60,7 +56,6 @@ const serviceTimes = [
     description:
       'Fun, age-appropriate teaching during the main service. Children are checked in and checked out by a parent/guardian.',
     venue: 'Kids Hall',
-    icon: '🌟',
     ageGroup: '3–12 years',
     safetyInfo:
       'All kids ministry volunteers are vetted and trained. We use a secure check-in/check-out system. Parents receive a tag number and must present it to collect their child.',
@@ -74,7 +69,6 @@ const serviceTimes = [
     description:
       'Start your weekend with powerful, corporate prayer. Come as you are.',
     venue: '',
-    icon: '🙏',
   },
 ];
 

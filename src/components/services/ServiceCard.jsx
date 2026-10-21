@@ -2,17 +2,12 @@ import { MapPinIcon, UserGroupIcon, ShieldCheckIcon } from '@heroicons/react/24/
 
 export default function ServiceCard({ service }) {
     return (
-        <article className="card flex h-full flex-col p-6">
-            <div className="flex items-start gap-4">
-                <span className="text-4xl" aria-hidden="true">
-                    {service.icon}
-                </span>
-                <div>
-                    <h3 className="text-2xl md:text-2xl">{service.name}</h3>
-                    <p className="mt-1 font-semibold text-burgundy-700">
-                        {service.day}, {service.time} to {service.endTime}
-                    </p>
-                </div>
+        <article className="flex flex-col p-6 h-full card">
+            <div>
+                <h3 className="text-2xl md:text-2xl">{service.name}</h3>
+                <p className="mt-1 font-semibold text-burgundy-700">
+                    {service.day}, {service.time} to {service.endTime}
+                </p>
             </div>
 
             <p className="mt-4 leading-relaxed text-charcoal-light">{service.description}</p>
@@ -31,9 +26,9 @@ export default function ServiceCard({ service }) {
             </ul>
 
             {service.safetyInfo && (
-                <div className="mt-5 rounded-xl border border-gold-200 bg-gold-50 p-4 text-sm">
-                    <p className="flex items-center gap-2 font-semibold text-burgundy-700">
-                        <ShieldCheckIcon className="h-5 w-5 shrink-0" aria-hidden="true" />
+                <div className="p-4 mt-5 text-sm rounded-xl border border-gold-200 bg-gold-50">
+                    <p className="flex gap-2 items-center font-semibold text-burgundy-700">
+                        <ShieldCheckIcon className="w-5 h-5 shrink-0" aria-hidden="true" />
                         Safe and secure check-in
                     </p>
                     <p className="mt-1 leading-relaxed text-charcoal-light">{service.safetyInfo}</p>
