@@ -4,6 +4,8 @@ import Layout from './components/layout/Layout';
 import ComingSoon from './pages/ComingSoon';
 import Home from './pages/Home';
 import ServiceTimes from './pages/ServiceTimes';
+import Sermons from './pages/Sermons';
+import Events from './pages/Events';
 import Books from './pages/Books';
 import BookDetail from './pages/BookDetail';
 
@@ -21,10 +23,10 @@ export default function App() {
                 <Route path="about" element={<ComingSoon title="About Us" />} />
                 <Route path="books" element={<Books />} />
                 <Route path="books/:slug" element={<BookDetail />} />
-                <Route path="sermons" element={<ComingSoon title="Sermons" />} />
+                <Route path="sermons" element={<Sermons />} />
                 <Route path="podcast" element={<ComingSoon title="Podcast" />} />
                 <Route path="bible" element={<ComingSoon title="Bible" />} />
-                <Route path="events" element={<ComingSoon title="Events" />} />
+                <Route path="events" element={<Events />} />
                 <Route path="marriage-training" element={<ComingSoon title="Marriage Training" />} />
                 <Route path="service-times" element={<ServiceTimes />} />
                 <Route path="give" element={<ComingSoon title="Offerings & Partnerships" />} />
