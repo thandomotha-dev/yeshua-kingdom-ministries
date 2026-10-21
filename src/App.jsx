@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import ServiceTimes from './pages/ServiceTimes';
 import Sermons from './pages/Sermons';
 import Events from './pages/Events';
+import MarriageTraining from './pages/MarriageTraining';
 import Books from './pages/Books';
 import BookDetail from './pages/BookDetail';
 
@@ -27,7 +28,7 @@ export default function App() {
                 <Route path="podcast" element={<ComingSoon title="Podcast" />} />
                 <Route path="bible" element={<ComingSoon title="Bible" />} />
                 <Route path="events" element={<Events />} />
-                <Route path="marriage-training" element={<ComingSoon title="Marriage Training" />} />
+                <Route path="marriage-training" element={<MarriageTraining />} />
                 <Route path="service-times" element={<ServiceTimes />} />
                 <Route path="give" element={<ComingSoon title="Offerings & Partnerships" />} />
                 <Route path="prayer-request" element={<ComingSoon title="Prayer Request" />} />

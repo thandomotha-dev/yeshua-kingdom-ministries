@@ -18,6 +18,9 @@ export const getUpcomingEvents = (events) =>
         .filter((e) => parse(e.endDate || e.date) >= startOfToday())
         .sort((a, b) => parse(a.date) - parse(b.date));
 
+// True when the date is before today
+export const isPastDate = (iso) => parse(iso) < startOfToday();
+
 export const formatLongDate = (iso) =>
     parse(iso).toLocaleDateString('en-ZA', {
         weekday: 'long',

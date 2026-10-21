@@ -50,13 +50,13 @@ export default function Home() {
 
             {/* Hero */}
             {/* TODO: add a church photo by placing it in /public/images/ and using it as a background here */}
-            <section className="gradient-burgundy text-white" aria-labelledby="hero-title">
-                <div className="container-custom py-20 md:py-32">
+            <section className="text-white gradient-burgundy" aria-labelledby="hero-title">
+                <div className="py-20 container-custom md:py-32">
                     <div className="max-w-3xl">
                         <h1 id="hero-title" className="text-5xl text-white md:text-6xl lg:text-display">
                             {siteConfig.churchName}
                         </h1>
-                        <p className="mt-4 font-heading text-2xl italic text-gold-300">{siteConfig.tagline}</p>
+                        <p className="mt-4 text-2xl italic font-heading text-gold-300">{siteConfig.tagline}</p>
                         <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/85">
                             {siteConfig.shortDescription}
                         </p>
@@ -69,7 +69,7 @@ export default function Home() {
                             </p>
                         )}
 
-                        <div className="mt-8 flex flex-wrap gap-4">
+                        <div className="flex flex-wrap gap-4 mt-8">
                             <Link to="/service-times" className="btn-secondary btn-lg">
                                 Join us this Sunday
                             </Link>
@@ -94,11 +94,8 @@ export default function Home() {
 
                     <div className="grid gap-6 md:grid-cols-3">
                         {snapshot.map((service) => (
-                            <article key={service.id} className="card p-6 text-center">
-                                <span className="text-4xl" aria-hidden="true">
-                                    {service.icon}
-                                </span>
-                                <h3 className="mt-3 text-2xl md:text-2xl">{service.name}</h3>
+                            <article key={service.id} className="p-6 text-center card">
+                                <h3 className="text-2xl md:text-2xl">{service.name}</h3>
                                 <p className="mt-2 font-semibold text-burgundy-700">
                                     {service.day}, {service.time} to {service.endTime}
                                 </p>
@@ -146,7 +143,7 @@ export default function Home() {
                             <p className="mt-4 leading-relaxed text-charcoal-light">
                                 {latestSermon.description}
                             </p>
-                            <Link to="/sermons" className="btn-primary mt-6">
+                            <Link to="/sermons" className="mt-6 btn-primary">
                                 Watch more sermons
                             </Link>
                         </div>
@@ -171,13 +168,13 @@ export default function Home() {
                                 {upcomingEvents.map((event) => {
                                     const badge = getDateBadge(event.date);
                                     return (
-                                        <article key={event.id} className="card flex flex-col p-6">
-                                            <div className="flex items-start gap-4">
+                                        <article key={event.id} className="flex flex-col p-6 card">
+                                            <div className="flex gap-4 items-start">
                                                 <div
-                                                    className="gradient-burgundy flex h-16 w-16 shrink-0 flex-col items-center justify-center rounded-xl text-white"
+                                                    className="flex flex-col justify-center items-center w-16 h-16 text-white rounded-xl gradient-burgundy shrink-0"
                                                     aria-hidden="true"
                                                 >
-                                                    <span className="font-heading text-2xl font-bold leading-none">
+                                                    <span className="text-2xl font-bold leading-none font-heading">
                                                         {badge.day}
                                                     </span>
                                                     <span className="mt-1 text-xs text-gold-300">{badge.month}</span>
@@ -228,7 +225,7 @@ export default function Home() {
                         <Link
                             to={`/books/${featuredBook.slug}`}
                             aria-label={`View ${featuredBook.title}`}
-                            className="mx-auto block w-48 md:w-full"
+                            className="block mx-auto w-48 md:w-full"
                         >
                             <BookCover book={featuredBook} />
                         </Link>
@@ -238,7 +235,7 @@ export default function Home() {
                             <h2 id="book-title" className="mt-4">
                                 {featuredBook.title}
                             </h2>
-                            <p className="mt-2 font-heading text-lg italic text-burgundy-600">
+                            <p className="mt-2 text-lg italic font-heading text-burgundy-600">
                                 {featuredBook.subtitle}
                             </p>
                             <p className="mt-1 text-sm text-charcoal-lighter">by {featuredBook.author}</p>
@@ -250,7 +247,7 @@ export default function Home() {
                                     From {formatPrice(bookPrice.price, bookPrice.currency)}
                                 </p>
                             )}
-                            <div className="mt-6 flex flex-wrap gap-4">
+                            <div className="flex flex-wrap gap-4 mt-6">
                                 <Link to={`/books/${featuredBook.slug}`} className="btn-primary">
                                     View this book
                                 </Link>
@@ -265,13 +262,13 @@ export default function Home() {
 
             {/* Prayer request call to action */}
             <section className="section bg-gold-100" aria-labelledby="prayer-title">
-                <div className="container-custom mx-auto max-w-2xl text-center">
+                <div className="mx-auto max-w-2xl text-center container-custom">
                     <h2 id="prayer-title">How can we pray for you?</h2>
                     <p className="mt-4 leading-relaxed text-charcoal-light">
                         Whatever you are facing, you do not have to carry it alone. Share your request and our
                         prayer team will stand with you.
                     </p>
-                    <Link to="/prayer-request" className="btn-primary btn-lg mt-8">
+                    <Link to="/prayer-request" className="mt-8 btn-primary btn-lg">
                         Send a prayer request
                     </Link>
                 </div>

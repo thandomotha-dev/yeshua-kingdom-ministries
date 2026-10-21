@@ -71,8 +71,8 @@ const marriageTraining = {
   ],
   schedule: {
     // TODO: Update with actual schedule
-    startDate: '2025-02-01',
-    endDate: '2025-03-22',
+    startDate: '2027-02-06',
+    endDate: '2027-03-27',
     day: 'Saturdays',
     time: '09:00 AM – 12:00 PM',
     venue: 'Yeshua Kingdom Ministries Fellowship Hall',
