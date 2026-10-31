@@ -2,16 +2,17 @@
  * ============================================
  * GIVING / OFFERINGS DATA
  * ============================================
- * Edit payment details below. These appear on the Offerings page.
+ * Edit payment details below. These appear on the Give page.
  *
  * IMPORTANT: Double-check all bank details before going live!
+ * Anything containing the word PLACEHOLDER in a link is hidden on the site
+ * until you replace it with a real address.
  */
 
 const givingOptions = [
   {
     id: 'bank-transfer',
     method: 'Bank Transfer (EFT)',
-    icon: '🏦',
     description: 'Transfer directly to our church bank account.',
     details: {
       // TODO: Replace with real banking details
@@ -26,7 +27,6 @@ const givingOptions = [
   {
     id: 'online-payment',
     method: 'Online Payment (Card)',
-    icon: '💳',
     description: 'Pay securely with your credit or debit card.',
     // TODO: Replace with your real payment link (e.g., PayFast, Paystack, Stripe)
     link: 'https://payfast.co.za/PLACEHOLDER',
@@ -35,7 +35,6 @@ const givingOptions = [
   {
     id: 'mobile-money',
     method: 'Mobile Payment',
-    icon: '📱',
     description: 'Send via SnapScan, Zapper, or EFT from your banking app.',
     details: {
       // TODO: Replace with real mobile payment details
@@ -46,7 +45,6 @@ const givingOptions = [
   {
     id: 'international',
     method: 'International Giving',
-    icon: '🌍',
     description: 'For partners giving from outside South Africa.',
     details: {
       // TODO: Replace with real international banking details
@@ -79,13 +77,15 @@ export const givingScriptures = [
 
 /**
  * How funds are used — transparency section
+ * TODO: these percentages are examples. Replace them with your real figures
+ * (they should add up to 100) before the site goes live.
  */
 export const fundUsage = [
-  { label: 'Ministry & Outreach', percentage: 35, icon: '🌍' },
-  { label: 'Building & Facilities', percentage: 20, icon: '🏗️' },
-  { label: 'Staff & Leadership', percentage: 20, icon: '👥' },
-  { label: 'Youth & Children', percentage: 15, icon: '🧒' },
-  { label: 'Community Projects', percentage: 10, icon: '❤️' },
+  { label: 'Ministry & Outreach', percentage: 35 },
+  { label: 'Building & Facilities', percentage: 20 },
+  { label: 'Staff & Leadership', percentage: 20 },
+  { label: 'Youth & Children', percentage: 15 },
+  { label: 'Community Projects', percentage: 10 },
 ];
 
 export default givingOptions;

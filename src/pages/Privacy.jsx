@@ -125,6 +125,8 @@ export default function Privacy() {
                                 'Our website hosting provider.',
                                 'YouTube, which provides our sermon videos. We use its privacy-enhanced mode, and a video only loads after you press play.',
                                 'Google Maps, which shows our location on some pages.',
+                                'Spotify, which plays our podcast episodes. An episode only loads after you choose to play it.',
+                                'Our payment provider, if you give online by card. Card payments happen on the provider\u2019s own secure page.',
                                 'WhatsApp, if you choose to message us there.',
                             ]}
                         />

@@ -13,6 +13,10 @@ import Bible from './pages/Bible';
 import Contact from './pages/Contact';
 import Privacy from './pages/Privacy';
 import PrayerRequest from './pages/PrayerRequest';
+import About from './pages/About';
+import Podcast from './pages/Podcast';
+import Give from './pages/Give';
+
 
 /**
  * ROUTES
@@ -25,16 +29,16 @@ export default function App() {
         <Routes>
             <Route element={<Layout />}>
                 <Route index element={<Home />} />
-                <Route path="about" element={<ComingSoon title="About Us" />} />
+                <Route path="about" element={<About />} />
                 <Route path="books" element={<Books />} />
                 <Route path="books/:slug" element={<BookDetail />} />
                 <Route path="sermons" element={<Sermons />} />
-                <Route path="podcast" element={<ComingSoon title="Podcast" />} />
+                <Route path="podcast" element={<Podcast />} />
                 <Route path="bible" element={<Bible />} />
                 <Route path="events" element={<Events />} />
                 <Route path="marriage-training" element={<MarriageTraining />} />
                 <Route path="service-times" element={<ServiceTimes />} />
-                <Route path="give" element={<ComingSoon title="Offerings & Partnerships" />} />
+                <Route path="give" element={<Give />} />
                 <Route path="contact" element={<Contact />} />
                 <Route path="privacy" element={<Privacy />} />
                 <Route path="prayer-request" element={<PrayerRequest />} />

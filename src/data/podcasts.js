@@ -7,6 +7,12 @@
  * For embedUrl, use the embed link from Spotify/YouTube:
  * - Spotify: Open episode → Share → Embed episode → Copy the src URL
  * - YouTube: Use https://www.youtube.com/embed/VIDEO_ID
+ *
+ * Links that contain the word PLACEHOLDER are hidden on the website until you
+ * replace them with real ones.
+ *
+ * TIP: If a text string contains an apostrophe (') wrap it in double
+ * quotes ("...") or backticks (`...`), or escape it like this: \'
  */
 
 const podcasts = [
@@ -36,7 +42,7 @@ const podcasts = [
     id: 3,
     title: 'Raising Gen Z for Christ',
     description:
-      'How do you reach a generation that's constantly connected yet deeply lonely? Practical wisdom for parents and youth leaders.',
+      "How do you reach a generation that's constantly connected yet deeply lonely? Practical wisdom for parents and youth leaders.",
     date: '2024-09-26',
     duration: '35 min',
     embedUrl: 'https://open.spotify.com/embed/episode/PLACEHOLDER',
@@ -59,6 +65,7 @@ const podcasts = [
 /**
  * Podcast platform links
  * TODO: Replace with your real podcast URLs
+ * (Google Podcasts no longer exists, so it is not used on the site.)
  */
 export const podcastPlatforms = {
   spotify: 'https://open.spotify.com/show/PLACEHOLDER',
