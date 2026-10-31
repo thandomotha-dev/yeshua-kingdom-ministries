@@ -10,6 +10,9 @@ import MarriageTraining from './pages/MarriageTraining';
 import Books from './pages/Books';
 import BookDetail from './pages/BookDetail';
 import Bible from './pages/Bible';
+import Contact from './pages/Contact';
+import Privacy from './pages/Privacy';
+import PrayerRequest from './pages/PrayerRequest';
 
 /**
  * ROUTES
@@ -32,9 +35,9 @@ export default function App() {
                 <Route path="marriage-training" element={<MarriageTraining />} />
                 <Route path="service-times" element={<ServiceTimes />} />
                 <Route path="give" element={<ComingSoon title="Offerings & Partnerships" />} />
-                <Route path="prayer-request" element={<ComingSoon title="Prayer Request" />} />
-                <Route path="contact" element={<ComingSoon title="Contact Us" />} />
-                <Route path="privacy" element={<ComingSoon title="Privacy Policy" />} />
+                <Route path="contact" element={<Contact />} />
+                <Route path="privacy" element={<Privacy />} />
+                <Route path="prayer-request" element={<PrayerRequest />} />
                 <Route path="*" element={<ComingSoon title="Page not found" />} />
             </Route>
         </Routes>
