@@ -1,0 +1,23 @@
+A0 changes only. Copy these files into the existing repository after syncing/backing up your current work.
+
+.env.example
+README.md
+index.html
+package.json
+public/_headers
+public/robots.txt
+public/sitemap.xml
+src/App.jsx
+src/components/books/NewsletterBanner.jsx
+src/components/forms/ContactForm.jsx
+src/components/forms/MarriageRegistrationForm.jsx
+src/components/forms/PartnerForm.jsx
+src/components/forms/PrayerRequestForm.jsx
+src/components/layout/Layout.jsx
+src/data/siteConfig.js
+src/pages/NotFound.jsx
+src/services/submitForm.js
+
+DELETE this obsolete file from the repository: src/services/formService.js
+
+Do not replace the entire repository with this archive. It intentionally excludes .env, .git, and node_modules.
